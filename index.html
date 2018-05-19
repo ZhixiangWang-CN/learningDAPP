@@ -1,0 +1,37 @@
+<html>
+<head>
+<meta charset="utf-8"/>  
+<title>区块链计数器</title>
+<script src="https://code.jquery.com/jquery-3.2.0.min.js"></script>
+<style>
+body{
+	width:60%;
+	margin:0 auto;
+}
+</style>
+</head>
+<body>
+<h1>welcome to blockchian calculator!</h1>
+<hr>
+
+
+	<input id="add1" placehoder="输入相加数字"></input> + <input id="add2" placehoder="输入相加数字"></input> = <span id="result">?</span></br></br>
+	<button type="button" onclick="calculate(this)">calculate it!</button>
+
+</br>
+
+<div style="position:absolute;bottom:50px;">
+	How many times have the calculator been used ? <a href="/count">findout!</a>
+</div>
+
+<script>
+	function calculate(e){
+		var add1 = $('#add1').val()
+		var add2 = $('#add2').val()
+		console.log(add1)
+		console.log(add2)
+		window.location.href = "/result?add1="+add1+"&add2="+add2;
+	}
+</script>
+</body>
+</html>
